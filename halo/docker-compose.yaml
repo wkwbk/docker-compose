@@ -2,7 +2,7 @@ version: "3"
 services:
   halo:
     container_name: halo
-    image: halohub/halo:latest
+    image: halohub/halo:2.2.0
     restart: on-failure:3
     ports:
       - "8090:8090"
