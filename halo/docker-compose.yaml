@@ -9,7 +9,7 @@ services:
     volumes:
       - ./data:/root/.halo2
     networks:
-      halo_network:
+      network:
     depends_on:
       halo-db:
         condition: service_healthy
@@ -28,7 +28,7 @@ services:
 
   halo-db:
     container_name: halo-db
-    image: mysql:latest
+    image: mysql
     restart: on-failure:3
     ports:
       - "3306:3306"
@@ -40,7 +40,7 @@ services:
       - MYSQL_ROOT_PASSWORD=o#DwN&JSa56
       - MYSQL_DATABASE=halo
     networks:
-      halo_network:
+      network:
     command:
       - --default-authentication-plugin=mysql_native_password
       - --character-set-server=utf8mb4
@@ -53,4 +53,4 @@ services:
       start_period: 30s
 
 networks:
-  halo_network:
+  network:
