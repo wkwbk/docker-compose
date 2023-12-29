@@ -15,7 +15,7 @@ services:
 
   yourls:
     container_name: yourls
-    image: yourls
+    image: yourls:latest
     restart: always
     ports:
       - "8200:80"

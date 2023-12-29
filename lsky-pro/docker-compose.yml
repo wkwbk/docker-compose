@@ -2,7 +2,7 @@ version: "3"
 services:
   lsky-pro:
     container_name: lsky-pro #容器名称
-    image: dko0/lsky-pro #所用镜像
+    image: dko0/lsky-pro:latest #所用镜像
     restart: always
     ports:
       - 7791:80 #端口映射7791可以改
